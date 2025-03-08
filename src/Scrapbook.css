@@ -1,0 +1,53 @@
+h1 {
+  font-size: 3.2em;
+  margin: 0rem;
+}
+
+.scrapbook-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.demoPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #74a37b;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-image {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .scrapbook-container {
+    flex-direction: row; /* Switch to row layout for larger screens */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+  }
+
+  .demoPage {
+    width: calc(50% - 20px);
+    padding: 20px;
+  }
+
+  .page-image {
+    max-height: 200px;
+  }
+}
