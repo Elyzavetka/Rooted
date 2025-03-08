@@ -103,21 +103,27 @@ export default function Home() {
   ];
 
   const [tooltip, setTooltip] = useState(null);
+  let clickTimeout = null;
 
   // This function will handle click to show/hide the tooltip
   const handleClickImage = (e, percentage) => {
     const { left, top } = e.target.getBoundingClientRect();
-    if (tooltip && tooltip.text === `${percentage}%`) {
-      // If the tooltip is already shown for this image, hide it
-      setTooltip(null);
+
+    // Double-click detection
+    if (clickTimeout) {
+      clearTimeout(clickTimeout); // Clear previous timeout if a second click occurs quickly
+      window.location.href = "/profile"; // Redirect to /profile on double-click
     } else {
-      // Otherwise, show the tooltip for this image
-      setTooltip({
-        text: `${percentage}%`,
-        x: left + 20, // Offset position slightly to the right of the plant image
-        y: top,  // Position the tooltip based on the clicked image
-        personIconSrc: person2, // Pass the person icon source
-      });
+      clickTimeout = setTimeout(() => {
+        // Single click action, show the tooltip
+        setTooltip({
+          text: `${percentage}%`,
+          x: left + 20, // Offset position slightly to the right of the plant image
+          y: top,  // Position the tooltip based on the clicked image
+          personIconSrc: person2, // Pass the person icon source
+        });
+        clickTimeout = null; // Reset the click timeout after delay
+      }, 300); // Timeout threshold for detecting double-click
     }
   };
 
