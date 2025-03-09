@@ -7,6 +7,7 @@ import forty from "../assets/40.png";
 import sixty from "../assets/60.png";
 import hundred from "../assets/100.png";
 import person2 from "../assets/person2.png";
+import sunflower from "../assets/sunflower.png";
 
 const Tooltip = ({ text, x, y, personIconSrc }) => {
   const tooltipStyle = {
@@ -61,7 +62,7 @@ export default function Home() {
     border: "none",
     padding: "1rem 2rem",
     fontSize: "1.5rem",
-    zIndex: 99,
+    zIndex: 98,
     cursor: "pointer",
     borderRadius: "8px",
     marginTop: "20px",
@@ -85,6 +86,10 @@ export default function Home() {
 
   const handleClick = () => {
     window.location.href = "/events";
+  };
+
+  const handleSunflowerClick = () => {
+    window.location.href = "/scrapbook";
   };
 
   const imageData = [
@@ -119,7 +124,7 @@ export default function Home() {
         setTooltip({
           text: `${percentage}%`,
           x: left + 20, // Offset position slightly to the right of the plant image
-          y: top,  // Position the tooltip based on the clicked image
+          y: top, // Position the tooltip based on the clicked image
           personIconSrc: person2, // Pass the person icon source
         });
         clickTimeout = null; // Reset the click timeout after delay
@@ -127,6 +132,14 @@ export default function Home() {
     }
   };
 
+  const sunflowerStyle = {
+    position: "absolute",
+    width: "300px",
+    height: "300px",
+    zIndex: 99,
+
+    marginRight: 230,
+  };
   const renderImages = (imageData, marginBottom) => {
     return imageData.map((image, index) => {
       const shiftX = 155 * index; // Shift by 155px for each iteration
@@ -158,9 +171,13 @@ export default function Home() {
       </button>
       {renderImages(imageData.slice(0, 4), 230)} {/* First row */}
       {renderImages(imageData.slice(4, 8), 155)} {/* Second row */}
-      {renderImages(imageData.slice(8, 12), 75)}  {/* Third row */}
+      {renderImages(imageData.slice(8, 12), 75)} {/* Third row */}
+      <img
+        src={sunflower}
+        style={sunflowerStyle}
+        onClick={handleSunflowerClick}
+      />
       <img src={soil} style={soilStyle} />
-
       {/* Render Tooltip if it's not null */}
       {tooltip && (
         <Tooltip
