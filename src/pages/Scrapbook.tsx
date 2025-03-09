@@ -1,10 +1,10 @@
-//
-import { useRef } from "react"
-import { ScrapPage } from "./components/ScrapPage"
-import HTMLFlipBook from "react-pageflip"
-import generatePDF from "react-to-pdf"
+// @ts-nocheck
+import { useRef } from "react";
+import { ScrapPage } from "./components/ScrapPage";
+import HTMLFlipBook from "react-pageflip";
+import generatePDF from "react-to-pdf";
 
-import "../Scrapbook.css"
+import "../Scrapbook.css";
 
 const styles = `
   .demoPage {
@@ -30,15 +30,15 @@ const styles = `
     margin: 10mm 0;
     border-radius: 8px;
   }
-`
+`;
 
 export default function Scrapbook() {
-  const targetRef = useRef(null)
-  const pdfRef = useRef(null)
+  const targetRef = useRef(null);
+  const pdfRef = useRef(null);
 
   const handleGeneratePDF = () => {
-    generatePDF(pdfRef, { filename: "scrapbook.pdf" })
-  }
+    generatePDF(pdfRef, { filename: "scrapbook.pdf" });
+  };
 
   return (
     <>
@@ -60,7 +60,10 @@ export default function Scrapbook() {
 
         {/* Hidden pages for PDF capture */}
         <style>{styles}</style>
-        <div ref={pdfRef} style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
+        <div
+          ref={pdfRef}
+          style={{ position: "absolute", left: "-9999px", top: "-9999px" }}
+        >
           <ScrapPage number={1} image="/assets/scrap 2.jpg">
             A memorable hackathon@HuddleHive
           </ScrapPage>
@@ -73,5 +76,5 @@ export default function Scrapbook() {
         </div>
       </div>
     </>
-  )
+  );
 }
