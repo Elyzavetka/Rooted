@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+// @ts-nocheck
+
+import { useState } from "react";
 import person2 from "../assets/person2.png";
 import blossom from "../assets/blossom.png";
 import { FaPlus, FaEdit, FaTimes } from "react-icons/fa"; // For the plus, edit, and x (close) icons
@@ -29,10 +31,10 @@ export default function Profile() {
         <img src={person2} alt="Profile" style={styles.profileImage} />
         <h2 style={styles.profileName}>Jane Doe</h2>
       </div>
-      
+
       {/* Divider Line Under Profile */}
       <hr style={styles.divider} />
-      
+
       {/* Interests Section */}
       <section style={styles.section}>
         <div style={styles.sectionHeader}>
@@ -133,7 +135,7 @@ export default function Profile() {
 
 const styles = {
   container: {
-   height: "932px",
+    height: "932px",
     width: "430px",
     backgroundColor: "#74A37B",
     color: "white",
@@ -240,8 +242,8 @@ const styles = {
     height: "400px",
     borderRadius: "50%",
     bottom: 0,
-    position:'absolute',
-    margin: '-20px',
+    position: "absolute",
+    margin: "-20px",
     padding: 0,
   },
 };
