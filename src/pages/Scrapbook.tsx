@@ -46,13 +46,13 @@ export default function Scrapbook() {
       <div className="scrapbook-container">
         <div ref={targetRef}>
           <HTMLFlipBook width={300} height={500} usePortrait={true}>
-            <ScrapPage number={1} image="/public/assets/scrap 2.jpg">
+            <ScrapPage number={1} image="/assets/scrap 2.jpg">
               A memorable hackathon@HuddleHive
             </ScrapPage>
-            <ScrapPage number={2} image="/public/assets/scrap 1.jpg">
+            <ScrapPage number={2} image="/assets/scrap 1.jpg">
               A fun day at the beach with besties
             </ScrapPage>
-            <ScrapPage number={3} image="/public/assets/scrap 1.jpg">
+            <ScrapPage number={3} image="/assets/scrap 1.jpg">
               Another fun day out!!!
             </ScrapPage>
           </HTMLFlipBook>
@@ -61,13 +61,13 @@ export default function Scrapbook() {
         {/* Hidden pages for PDF capture */}
         <style>{styles}</style>
         <div ref={pdfRef} style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
-          <ScrapPage number={1} image="/public/assets/scrap 2.jpg">
+          <ScrapPage number={1} image="/assets/scrap 2.jpg">
             A memorable hackathon@HuddleHive
           </ScrapPage>
-          <ScrapPage number={2} image="/public/assets/scrap 1.jpg">
+          <ScrapPage number={2} image="/assets/scrap 1.jpg">
             A fun day at the beach with besties
           </ScrapPage>
-          <ScrapPage number={3} image="/public/assets/scrap 3.jpg">
+          <ScrapPage number={3} image="/assets/scrap 3.jpg">
             Another fun day out!!!
           </ScrapPage>
         </div>

@@ -10,7 +10,7 @@ export const ScrapPage = React.forwardRef<HTMLDivElement, ScrapPageProps>(
   (props, ref: ForwardedRef<HTMLDivElement>) => {
     return (
       <div className="demoPage" ref={ref}>
-        <h1>Yearend Scrapbook</h1>
+        <h1>Scrapbook</h1>
         {props.image && (
           <div>
             <img
