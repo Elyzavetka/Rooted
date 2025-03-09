@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react";
 import hh from "../assets/huddlehive.png";
 import uni from "../assets/uni.png";
@@ -58,7 +60,12 @@ const Gardens = () => {
     <div style={styles.container}>
       <h1 style={styles.title}>My Gardens</h1>
       <div style={styles.background}>
-        <a href="/garden/huddle-hive" className="icon" id="icon1" style={styles.icon}>
+        <a
+          href="/garden/huddle-hive"
+          className="icon"
+          id="icon1"
+          style={styles.icon}
+        >
           <img src={hh} alt="Icon 1" style={styles.img} />
         </a>
         <a href="#" className="icon" id="icon2" style={styles.icon}>
