@@ -9,7 +9,14 @@ import hundred from "../assets/100.png";
 import person2 from "../assets/person2.png";
 import sunflower from "../assets/sunflower.png";
 
-const Tooltip = ({ text, x, y, personIconSrc }) => {
+interface TooltipProps {
+  text: string;
+  x: number;
+  y: number;
+  personIconSrc: string;
+}
+
+const Tooltip: React.FC<TooltipProps> = ({ text, x, y, personIconSrc }) => {
   const tooltipStyle = {
     position: "absolute",
     top: `${y + 30}px`, // Position below the image

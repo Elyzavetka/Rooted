@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Garden from "./pages/Garden"
-import Scrapbook from "./pages/Scrapbook"
-import Events from "./pages/Events"
-import Profile from "./pages/Profile"
-import "./App.css"
-import Gardens from "./pages/Gardens"
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Garden from "./pages/Garden";
+import Scrapbook from "./pages/Scrapbook";
+import Events from "./pages/Events/Events";
+import Profile from "./pages/Profile";
+import "./App.css";
+import Gardens from "./pages/Gardens";
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
         <Route path="garden/huddle-hive" element={<Garden />}></Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
