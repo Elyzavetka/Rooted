@@ -1,11 +1,11 @@
 .eventList {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin-top: 10px;
   max-width: none;
-  align-items: flex-start;
-  justify-content: start;
 }
 
 .modal {
@@ -21,6 +21,7 @@
   z-index: 100;
   border-radius: 8px;
   background-color: #fffafb;
+  text-align: center;
 }
 
 .modal button {
