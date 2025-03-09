@@ -1,16 +1,21 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Garden from "./pages/Garden";
+import Scrapbook from "./pages/Scrapbook";
+import Events from "./pages/Events/Events";
+
 import "./App.css";
-import EventList from "./components/EventsList/EventsList";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <EventList />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="garden" element={<Garden />}></Route>
+        <Route path="scrapbook" element={<Scrapbook />}></Route>
+        <Route path="events" element={<Events />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
