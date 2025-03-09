@@ -7,11 +7,10 @@
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fffafb;
-  width: 370px;
+  width: 310px;
   height: 120px;
   justify-content: flex-start;
   overflow: hidden;
-  justify-content: center;
 }
 
 .eventImage {
@@ -33,6 +32,7 @@ p {
   line-height: 1.5;
   text-align: left;
   overflow: hidden;
+  text-align: left;
   margin-top: 0 !important;
   margin-bottom: 10px !important;
   display: -webkit-box;
@@ -46,16 +46,19 @@ p {
   margin-top: 0;
   margin-bottom: 5px;
   color: #542731;
+  text-align: left;
 }
 
 .eventLocation {
   font-size: 1rem;
   color: #6d6c6c;
   margin: 0;
+  text-align: left;
 }
 
 .eventRating {
   margin-top: 0;
+  text-align: left;
 }
 
 .filledStar {
