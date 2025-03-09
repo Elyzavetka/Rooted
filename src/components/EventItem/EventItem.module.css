@@ -1,0 +1,70 @@
+.eventItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 5px 0;
+  border: 1px solid #542731;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fffafb;
+  width: 370px;
+  height: 120px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.eventImage {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+p {
+  margin-bottom: 10px;
+}
+.eventDescription {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  overflow: hidden;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.eventTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #542731;
+  text-align: left;
+}
+
+.eventLocation {
+  font-size: 1rem;
+  color: #6d6c6c;
+  margin: 0;
+  text-align: left;
+}
+
+.eventRating {
+  margin-top: 0;
+  text-align: left;
+}
+
+.filledStar {
+  color: #ffcc00;
+}
+
+.emptyStar {
+  color: #ddd;
+}
